@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+<style>
+
+/* Evitar problemas com dimensionamentos de elementos (mudando o Box Model) */
+* {box-sizing: border-box;}
+
+body { font-family: 'Segoe UI', Verdana, sans-serif;}
+/* "itens"
+São os elementos que desejamos alinhar/distribuir usando Flexbox */
+article { 
+    box-shadow: black 1px 1px 5px;
+    padding: 10px;
+    border-radius: 8px;
+    
+    width: 30%;
+    /*  Se não definir altura para os itens, eles serão "esticados" 
+        de acordo com a altura da container */
+    height: 450px;
+}
+    /* "Container"
+    Elemento no qual ativamos o Flexbox 
+    e aplicamos as propriedades de alinhamento/distribuição */
+.container { 
+    /* Ativando o Flexbox */
+    display: flex;
+
+    /*  Direções do Flexbox:
+        row (padrão/horizontal)
+        column (coluna/vertical)
+        row-reverse
+        column-reverse */
+
+    flex-direction: row;
+    justify-content: center;
+
+    /*  Espaço/Intervalo 
+        entre cada item */
+    gap: 40px;
+
+    /*  Se a direção for row, 
+        se comporta como alinhamento vertical  */
+    align-items: center;
+    /* "Quebra" do flex */
+    flex-wrap: wrap;
+
+    /* Alinhamento do grupo de itens */
+    align-content: center;
+
+    border: solid 4px red;
+    width: 80%;
+    height: 1500px;
+    margin: auto;
+
+}
+
+img { max-width: 100%; }
+
+.exemplo { 
+    background-color: cornflowerblue;
+    align-self: flex-start;
+}
+
+</style>
+</head>
+<body>
+    <h1>Trabalhando com Flexbox</h1>
+    <hr>
+    <p>Flexbox é um mecanismo CSS3 que permite aplicar facilmente recursos de alinhamento, espaçamento e distribuição de elementos no HTML. 
+    Muito útil na elaboração de layouts.</p>
+
+    <div class="container">
+        <article class="exemplo">
+            <img src="imagens/mini-apple.jpg" alt="">
+            <h2>Apple</h2>
+            <p>Apple Inc. é uma empresa multinacional norte-americana que tem o objetivo de projetar e comercializar produtos eletrônicos de consumo, software de computador e computadores pessoais.</p>
+        </article>
+    
+        <article>
+            <img src="imagens/mini-ibm.jpg" alt="">
+            <h2>IBM</h2>
+            <p>A International Business Machines Corporation é uma empresa dos Estados Unidos voltada para a área de informática. A empresa é uma das poucas na área de tecnologia da informação com uma história contínua que remonta ao século XIX.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-microsoft.jpg" alt="">
+            <h2>Microsoft</h2>
+            <p>Microsoft Corporation é uma empresa transnacional dos Estados Unidos com sede em Redmond, Washington, que desenvolve, fabrica, licencia, apoia e vende softwares de computador, produtos eletrônicos, computadores e serviços pessoais</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-apple.jpg" alt="">
+            <h2>Apple</h2>
+            <p>Apple Inc. é uma empresa multinacional norte-americana que tem o objetivo de projetar e comercializar produtos eletrônicos de consumo, software de computador e computadores pessoais.</p>
+        </article>
+    
+        <article>
+            <img src="imagens/mini-ibm.jpg" alt="">
+            <h2>IBM</h2>
+            <p>A International Business Machines Corporation é uma empresa dos Estados Unidos voltada para a área de informática. A empresa é uma das poucas na área de tecnologia da informação com uma história contínua que remonta ao século XIX.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-microsoft.jpg" alt="">
+            <h2>Microsoft</h2>
+            <p>Microsoft Corporation é uma empresa transnacional dos Estados Unidos com sede em Redmond, Washington, que desenvolve, fabrica, licencia, apoia e vende softwares de computador, produtos eletrônicos, computadores e serviços pessoais</p>
+        </article>
+    </div>
+
+
+</body>
+</html>
